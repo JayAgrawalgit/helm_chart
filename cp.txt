@@ -1,0 +1,9 @@
+env:
+          - name: WORDPRESS_DB_HOST
+            value: sql-chat5
+          - name: WORDPRESS_DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: db-secret
+                key: MYSQL_ROOT_PASSWORD
+
